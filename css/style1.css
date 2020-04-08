@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+  --segment: calc(360 / 12);
+  --bordercolor: rgba(153, 0, 153, 1);
+  --bkgreen:rgba(0, 153, 153, 0.87);
+  background-size: cover;
+  background-image:linear-gradient(20deg,#80808055,#80808099,#cccccc55,#cccccc99,#80808055,#80808077,#cccccc88), linear-gradient(450deg,#80808055,#80808099,#cccccc55,#cccccc99,#80808055,#80808033,#cccccc88);
+background-color: cadetblue;
+     background-blend-mode: multiply;
+  
+}
+div.signature{
+  position: absolute;
+bottom:0;
+right:0;
+}
+div.wrap{
+  position: inherit;
+
+  width:100%;
+height:100%;
+}
+div#clock {
+  position: absolute;
+  
+  background-color:var(--bkgreen) ;
+  box-shadow:inset 1px 1px 20px rgb(47, 54, 54),1px 1px 20px rgb(47, 54, 54);
+
+  width:350px;
+  height:350px;
+  top:25%;
+  left:25%;
+  text-shadow:1px 1px 20px rgba(47, 54, 54,0.5);
+}
+div#numbers{
+display:flex;
+position: absolute;
+  border:2px inset orange;
+border-radius:50% ;
+background-image:linear-gradient(20deg,#cccccc55,#cccccc00,#cccccc55,#cccccc99,#cccccc55,#cccccc33,#cccccc88);
+box-shadow:inset 1px 1px 20px rgb(47, 54, 54),1px 1px 20px rgb(47, 54, 54);
+
+}
+
+.num{
+width:100%;
+height:100%;
+}
+.hn{
+   
+   width: 50%;
+   height: 50%;
+}
+
+
+.hands {
+  opacity: 80%;
+  margin: 0;
+  padding:0;
+  display: block;
+  position: relative;
+  background-color:#1bd64355;
+  background-image:linear-gradient(110deg,#00000055,#00000000,#00000055,#00000099,#00000055,#00000033,#00000088);
+  top:24%;
+  left:25%;
+ transform: rotateZ(-90deg);
+ box-shadow:0px 0px 8px rgba(0, 0, 0, 0.794);
+ border:8px groove rgba(128, 128, 128, 0.493);
+  border-radius: 50% 50%;
+}
+
+.hand {
+  position: absolute;  
+   top:50%;
+  left:50%;
+  background-clip:text;
+  text-align: right;
+  text-shadow:1px 1px 5px rgba(31, 37, 37, 0.9);
+  transform: rotate(0deg);
+
+}
+div#mill{
+width: 70%;
+animation: spin 1ms infinite steps(1);
+
+}
+div#msec{
+  width:30%;
+  opacity:20%;
+ top:43%;
+  animation: spin 1s infinite steps(60);
+  left: 50%;
+}
+
+div#sec2{
+  width: 60%;
+    top:43%;
+  animation: spin 60s infinite steps(60);
+  left: 50%;
+}
+div#min{
+  width: 30%;
+    top:43%;
+    left: 50%;
+  animation: spin 3600s infinite steps(60);
+}
+div#hr2{
+    width: 58%;
+   top:42%;
+   left: 50%;
+ background-color: transparent;
+   animation: spin 3600s infinite steps(60);
+}
+div#hr{
+  width: 75%;
+ top:39%;
+ left: 50%;
+  font-size: 1.5em;
+text-justify: newspaper;
+text-decoration-style: dotted;
+background-color: transparent;
+transform: translate(50%, 50%);
+ animation: spin 216000s infinite steps(60);
+}
+span {
+margin:0 auto;
+padding:5px;
+text-shadow:1px 1px 5px rgba(31, 37, 37, 0.5);
+
+
+}
+@keyframes spin {
+from{
+transform: rotate(0deg);
+}
+to{
+  transform: rotate(360deg);
+
+}
+
+
+}
